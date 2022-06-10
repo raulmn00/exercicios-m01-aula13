@@ -24,7 +24,9 @@ const agendaTelefonica = {
             if (listaContatos[i].nome === nome) {
                 listaContatos[i].telefone = novoTelefone;
             }
+            break;
         }
+        console.log("Contato inexistente");
     },
     deletar: function (nome) {
         for (let i = 0; i < listaContatos.length; i++) {
@@ -32,7 +34,9 @@ const agendaTelefonica = {
                 console.log(`Contato a ser deletado: ${listaContatos[i].nome}`);
                 listaContatos.splice(i, 1);
             }
+            break;
         }
+        console.log("Contato inexistente");
     },
     consultar: function (nome) {
         for (let i = 0; i < listaContatos.length; i++) {
@@ -41,7 +45,9 @@ const agendaTelefonica = {
                     `Nome: ${nome}, Telefone: ${listaContatos[i].telefone}`
                 );
             }
+            break;
         }
+        console.log("Contato inexistente");
     },
 };
 
@@ -51,4 +57,4 @@ agendaTelefonica.adicionar("Amanda", 16992357214);
 agendaTelefonica.adicionar("Michel", 16992357214);
 agendaTelefonica.adicionar("Gustavo", 16992357214);
 
-agendaTelefonica.consultar("Gustavo");
+agendaTelefonica.deletar("Gustavo");
